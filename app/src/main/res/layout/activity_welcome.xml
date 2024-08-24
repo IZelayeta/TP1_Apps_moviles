@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Bienvenido"
+        android:textSize="24sp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginTop="34dp"
+        />
+    <LinearLayout
+        android:id="@+id/vertical_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/text_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginHorizontal="42dp">
+        
+        <RadioGroup
+            android:id="@+id/platform_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            android:layout_gravity="center">
+            
+            <RadioButton
+                android:id="@+id/android_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android"
+                android:layout_margin="5dp"/>
+
+            <RadioButton
+                android:id="@+id/ios_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ios"
+                android:layout_margin="5dp"/>
+
+        </RadioGroup>
+        
+        <ImageView
+            android:id="@+id/platform_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Imagen de la plataforma utilizada"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_programming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Programación"
+            android:layout_marginTop="16dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_networks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redes"
+            android:layout_marginTop="8dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_security"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seguridad"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_networks"
+            android:layout_marginTop="8dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_hardware"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hardware"
+            android:layout_marginTop="8dp"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Otra"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/editext_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Especifique otra preferencia"
+            android:visibility="gone"
+            android:layout_marginHorizontal="8dp" />
+        
+        <Button
+            android:id="@+id/comeback_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver al inico" />
+
+    
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
